@@ -1,17 +1,19 @@
-# SQLite. Versions 3.8.0 and up are supported.
-#   gem install sqlite3
+# PostgreSQL. Versions 1.5.4 and up are supported.
+#   gem install postgresql
 #
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem "sqlite3"
+#   Ensure the PostgreSQL gem is defined in your Gemfile
+#   gem "pg"
 #
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: postgres
+  password: jospin
   timeout: 5000
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: tech-blog
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
