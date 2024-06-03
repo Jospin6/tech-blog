@@ -9,6 +9,8 @@ gem "rails", "~> 7.0.8", ">= 7.0.8.1"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+gem 'rubocop', '~> 1.64', '>= 1.64.1'
+
 # For User authentication
 gem 'devise', '~> 4.9', '>= 4.9.3'
 gem 'omniauth', '~> 2.1', '>= 2.1.2'
