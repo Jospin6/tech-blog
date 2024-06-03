@@ -11,6 +11,7 @@ gem "sprockets-rails"
 
 # For User authentication
 gem 'devise', '~> 4.9', '>= 4.9.3'
+gem 'omniauth', '~> 2.1', '>= 2.1.2'
 
 #Use postgreSQL as the database for Active Record
 gem 'pg', '~> 1.5', '>= 1.5.4'
