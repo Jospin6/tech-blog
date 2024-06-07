@@ -18,7 +18,6 @@ gem 'omniauth-google-oauth2', '~> 1.1', '>= 1.1.1'
 
 # For tests
 gem 'rspec', '~> 3.13'
-gem 'capybara', '~> 3.40'
 
 #Use postgreSQL as the database for Active Record
 gem 'pg', '~> 1.5', '>= 1.5.4'
