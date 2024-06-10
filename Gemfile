@@ -12,7 +12,7 @@ gem "sprockets-rails"
 gem 'rubocop', '~> 1.64', '>= 1.64.1'
 
 # For User authentication
-gem 'devise', '~> 4.9', '>= 4.9.3'
+gem 'devise'
 gem 'omniauth', '~> 2.1', '>= 2.1.2'
 gem 'omniauth-google-oauth2', '~> 1.1', '>= 1.1.1'
 

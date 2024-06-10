@@ -312,7 +312,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
-  devise (~> 4.9, >= 4.9.3)
+  devise
   importmap-rails
   jbuilder
   omniauth (~> 2.1, >= 2.1.2)
