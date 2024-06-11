@@ -15,12 +15,15 @@
     <main>
       <div class="w-full h-[80px] border-b-[1px] border-gray-300 flex justify-between items-center text-black md:px-[50px] px-2">
         <div class="text-2xl font-[500]"><%= link_to "jnDev", root_path %></div>
-        <div> 
-          <% if user_signed_in? %>
-            <%= link_to "sign out", destroy_user_session_path, method: :delete %> 
-          <% else %>
-            <%= link_to "sign up", new_user_session_path %> 
-          <% end %>
+        <div class="flex justify-between">
+            <%= link_to "Home", root_path %> 
+            <%= link_to "About", root_path %>
+            <%= link_to "Portfolio", root_path %>
+            <% if user_signed_in? %>
+                <%= link_to "Sign out", destroy_user_session_path, method: :delete %> 
+            <% else %>
+                <%= link_to "Sign up", new_user_session_path %> 
+            <% end %>
         </div>
       </div>
       <div class="md:w-[80%] md:m-auto">
