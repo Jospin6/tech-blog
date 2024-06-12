@@ -1,7 +1,7 @@
 <div class="w-full h-[80px] border-b-[1px] border-gray-300 flex justify-between items-center text-black md:px-[50px] px-2">
     <div class="text-2xl font-[500]"><%= link_to "jnDev", root_path %></div>
     <div class="flex">
-        <div class="px-[10px] py-[5px] cursor-pointer rounded-lg border-[1px] border-blue-600 text-blue-600 mr-6">Create Post</div>
+        <%= link_to "Create Post", new_post_path, class: "px-[10px] py-[5px] cursor-pointer rounded-lg border-[1px] border-blue-600 text-blue-600 mr-6" %>
         <div id="show-menu" class="cursor-pointer">menu</div>
     </div>
 </div>
