@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
 
-@layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
+@layer utilities {
+  .bg-opacity {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .box-shadow {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   }
 }
-
-*/
