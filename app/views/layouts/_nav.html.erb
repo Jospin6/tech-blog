@@ -1,12 +1,15 @@
-<div class="w-full h-[50px] border-b-[1px] border-gray-300 flex justify-between items-center text-black md:px-[50px] px-2">
+<div class="w-full h-[50px] border-b-[1px] border-gray-300 flex justify-between 
+    items-center text-black md:px-[50px] px-2">
     <div class="text-2xl font-[500]"><%= link_to "jnDev", root_path %></div>
     <div class="flex">
-        <%= link_to "Create Post", new_post_path, class: "px-[10px] py-[5px] cursor-pointer rounded-lg border-[1px] border-blue-600 text-blue-600 mr-6" %>
+        <%= link_to "Create Post", new_post_path, class: "px-[10px] py-[5px] cursor-pointer 
+            rounded-lg border-[1px] border-blue-600 text-blue-600 mr-6" %>
         <div id="show-menu" class="cursor-pointer">menu</div>
     </div>
 </div>
 
-<div id="menu" class="w-[300px] h-[100vh] bg-white z-10 border-l-[1px] hidden border-gray-300 float-right fixed right-0 top-0">
+<div id="menu" class="w-[300px] h-[100vh] bg-white z-10 border-l-[1px] hidden 
+    border-gray-300 float-right fixed right-0 top-0">
     <div class="h-[100px] p-4">
         <div id="close" class="text-black cursor-pointer">X</div>
     </div>
@@ -14,7 +17,8 @@
     <%= link_to "About", root_path, class: "block text-center mt-4" %>
     <%= link_to "Portfolio", root_path, class: "block text-center mt-4" %>
     <% if user_signed_in? %>
-        <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "block text-center mt-4" %> 
+        <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "block 
+            text-center mt-4" %> 
     <% else %>
         <%= link_to "Sign up", new_user_session_path, class: "block text-center mt-4" %> 
     <% end %>
