@@ -12,9 +12,10 @@
   <% end %>
 
   <div class="mt-4 rounded-t-lg shadow h-auto py-6 px-4">
-    <div class="">
+    <div class="flex">
+      <img id="image-preview" src="#" alt="Image insight" class="hidden max-w-[100px] mr-2" />
       <%= form.label :cover_image_url, class: "px-[10px] py-[10px] ml-4 cursor-pointer border-[1px] border-gray-400 font-[500] rounded-lg" %>
-      <%= form.file_field :cover_image_url, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full hidden" %>
+      <%= form.file_field :cover_image_url, onchange: "previewImage(this)", class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full hidden" %>
     </div>
 
     <div class="mt-2">
@@ -39,3 +40,20 @@
     <%= form.submit class: "rounded-lg py-[5px] px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
   </div>
 <% end %>
+
+<script>
+  function previewImage(input) {
+    let preview = document.getElementById('image-preview')
+    if(input.files && input.files[0]){
+      let reader = new FileReader()
+      reader.onload = function(e) {
+        preview.src = e.target.result
+        preview.classList.remove("hidden")
+      }
+      reader.readAsDataURL(input.files[0])
+    } else {
+      preview.src = "#"
+      preview.classList.add("hidden")
+    }
+  }
+</script>
