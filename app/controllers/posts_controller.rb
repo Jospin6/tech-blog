@@ -27,14 +27,14 @@ class PostsController < ApplicationController
     @post.published_at = Time.now
     
     if @post.save
-      redirect_to post_url(@post), notice: "Post was successfully created." 
+      redirect_to root_path(@post), notice: "Post was successfully created." 
     end
   end
 
   # PATCH/PUT /posts/1 or /posts/1.json
   def update
     if @post.update(post_params)
-      redirect_to post_url(@post), notice: "Post was successfully updated."
+      redirect_to root_path(@post), notice: "Post was successfully updated."
     end
   end
 
@@ -42,7 +42,7 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
 
-    redirect_to posts_url, notice: "Post was successfully destroyed." 
+    redirect_to root_path, notice: "Post was successfully destroyed." 
   end
 
   private
