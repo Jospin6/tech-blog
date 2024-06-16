@@ -19,7 +19,6 @@ module PostsHelper
         else
             timestamp.strftime("%d %b %Y")
         end
-
     end
-    
+
 end
