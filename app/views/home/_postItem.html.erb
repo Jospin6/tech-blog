@@ -1,18 +1,17 @@
-<div class="w-full h-[300px] flex">
-    <div class="rounded-l-lg h-[200px] w-[200px]">
-        <%= image_tag post.cover_image_url_url, class: "w-full h-[200px] object-cover rounded-l-lg" %>
+<div class="w-full h-[100px] flex bg-gray-100 rounded-lg">
+    <div class="rounded-l-lg h-[100px] w-[100px]">
+        <%= image_tag post.cover_image_url_url, class: "w-full h-[100px] object-cover rounded-l-lg" %>
     </div>
     <div class="ml-2">
         <div class="text-2xl text-black font-[500]">
             <%= post.title %>
         </div>
 
-        <div class="my-2 text-black">
-            <%= post.tags %>
+        <div class="my-2 text-black font-[300]">
+            <%= display_tags(post.tags) %>
         </div>
-
-        <div class="my-2 text-black">
-            <%= post.content %>
+        <div class="my-2 text-black font-[300]">
+            <%= post.created_at %>
         </div>
     </div>
 </div>
