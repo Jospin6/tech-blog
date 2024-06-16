@@ -9,8 +9,7 @@ module PostsHelper
         diff = now - timestamp.to_time
 
         if diff < 60
-            "posted instantanely"
-
+            "just now"
         elsif diff < 3600
             "#{(diff / 60).to_i} minutes ago"
         elsif diff < 86400
