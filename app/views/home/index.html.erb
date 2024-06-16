@@ -8,7 +8,7 @@
         <% content_for :title, "Posts" %>
 
         <% @posts.each do |post| %>
-            <%= render post %>
+            <%= render 'postItem', post: post %>
         <% end %>
     </div>
     <div class="col-span-2 h-[200px] bg-green-300">
