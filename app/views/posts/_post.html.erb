@@ -6,8 +6,9 @@
     <%= post.title %>
   </div>
 
-  <div class="my-2 text-black">
-    <%= post.tags %>
+  <div class="my-2 text-black flex justify-between">
+    <span><%= display_tags(post.tags) %></span>
+    <span><%= published_time(post.created_at) %></span>
   </div>
 
   <div class="my-2 text-black">
