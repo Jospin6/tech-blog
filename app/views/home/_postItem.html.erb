@@ -1,16 +1,17 @@
-<div class="w-full h-[100px] flex bg-gray-100 rounded-lg">
-    <div class="rounded-l-lg h-[100px] w-[100px]">
-        <%= image_tag post.cover_image_url_url, class: "w-full h-[100px] object-cover rounded-l-lg" %>
+<div class="w-full h-[150px] flex bg-gray-100 rounded-lg mb-2">
+    <div class="rounded-l-lg h-[150px] w-[150px]">
+        <%= image_tag post.cover_image_url_url, class: "w-full h-[150px] object-cover rounded-l-lg" %>
     </div>
-    <div class="ml-2 w-[83%]">
+    <div class="ml-2 w-[75%] relative">
 
         <%= link_to "#{post.title}", post_path(post.id), class: "text-2xl text-black font-[500]"%>
 
         <div class="my-2 text-black text-[14px] font-[300]">
             <%= display_tags(post.tags) %>
         </div>
-        <div class="my-2 text-black font-[300] flex justify-end">
-            <span class="text-[14px]"><%= published_time(post.created_at) %></span>
+        <div class="my-2 text-black flex justify-between w-full font-[300] flex justify-end absolute bottom-0 text-[14px]">
+            <span>username</span>
+            <span><%= published_time(post.created_at) %></span>
         </div>
     </div>
 </div>
