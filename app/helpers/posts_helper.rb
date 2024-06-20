@@ -1,7 +1,7 @@
 module PostsHelper
     def display_tags(tags_string)
-        tags = tags_string.split(',').map(&:strip)
-        tags.map { |tag| "##{tag}" }.join(' ')
+        tags = tags_string.split(',')
+        tags
     end
 
     def published_time(timestamp)

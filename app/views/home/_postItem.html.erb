@@ -9,7 +9,10 @@
             class: "text-2xl text-black font-[500]"%>
 
         <div class="my-2 text-black text-[14px] font-[300]">
-            <%= display_tags(post.tags) %>
+            <% display_tags(post.tags).each do |tag| %>
+                <span class="mr-2 px-[10px] py-[5px] rounded-lg 
+                    hover:border-[1px] hover:border-green-500 cursor-pointer"> <%= "##{tag}" %> </span>
+            <% end %>
         </div>
         <div class="my-2 text-black flex justify-between w-full font-[300] 
             flex justify-end absolute bottom-0 text-[14px]">
