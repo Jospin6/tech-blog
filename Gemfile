@@ -16,8 +16,6 @@ gem 'devise'
 gem 'omniauth', '~> 2.1', '>= 2.1.2'
 gem 'omniauth-google-oauth2', '~> 1.1', '>= 1.1.1'
 
-# For tests
-gem 'rspec', '~> 3.13'
 
 #Use postgreSQL as the database for Active Record
 gem 'pg', '~> 1.5', '>= 1.5.4'
@@ -80,6 +78,7 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem 'rspec-rails', '~> 6.1.0'
   gem "capybara"
   gem "selenium-webdriver"
 
