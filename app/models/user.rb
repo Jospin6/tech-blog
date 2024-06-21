@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+
+  attr_accessor :login
+
   # Include default devise modules. Others available are:
   # :lockable, :timeoutable, and :omniauthable
   validates :username, 
