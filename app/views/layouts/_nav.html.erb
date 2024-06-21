@@ -14,7 +14,7 @@
         <div id="close" class="text-black cursor-pointer">X</div>
     </div>
     <%= link_to "Home", root_path, class: "block text-center mt-4" %> 
-    <%= link_to "About", root_path, class: "block text-center mt-4" %>
+    <%= link_to "About", about_path, class: "block text-center mt-4" %>
     <%= link_to "Portfolio", root_path, class: "block text-center mt-4" %>
     <% if !user_signed_in? %>
         <%= link_to "Sign up", new_user_session_path, class: "block text-center mt-4" %> 
