@@ -14,6 +14,9 @@
                     hover:border-[1px] hover:border-green-500 cursor-pointer"> <%= "##{tag}" %> </span>
             <% end %>
         </div>
+        <div class="text-[15px]">
+            <%= link_to "#{excerpt(post.content).concat("...")}", post_path(post.id) %>
+        </div>
         <div class="my-2 text-black flex justify-between w-full font-[300] 
             flex justify-end absolute bottom-0 text-[14px]">
             <span>username</span>

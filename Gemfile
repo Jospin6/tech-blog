@@ -85,3 +85,5 @@ group :test do
 end
 
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.8'
+
+gem 'nokogiri', '~> 1.15', '>= 1.15.4'

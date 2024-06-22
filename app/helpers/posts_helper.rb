@@ -26,5 +26,12 @@ module PostsHelper
         skills
     end
     
-
+    def excerpt(rich_text)
+        text = rich_text.to_s
+        document = Nokogiri::HTML.parse(text)
+        excerpt = document.text.strip
+        excerpt = excerpt[0..80]
+        return excerpt
+    end
+    
 end
