@@ -1,43 +1,101 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="w-[50%] m-auto">
+  <h2 class="text-xl font-[500]">Edit <%= resource_name.to_s.humanize %></h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+    <div class="box-shadow px-2 py-4 rounded-lg mt-4">
+      <div class="flex field">
+        <img id="image-preview" src="#" alt="Image insight" class="hidden max-w-[100px] mr-2" />
+        <%= f.label :image, class: "px-[10px] py-[10px] cursor-pointer border-[1px] border-gray-400 font-[500] rounded-lg" %>
+        <%= f.file_field :image, onchange: "previewImage(this)", class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full hidden" %>
+      </div>
+      <div class="field">
+        <%= f.label :username, placeholder: "username" %><br />
+        <%= f.text_field :username, class: "w-full rounded-lg" %>
+      </div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <div class="field">
+        <%= f.label :skills, placeholder: "skills" %><br />
+        <%= f.text_field :skills, class: "w-full rounded-lg" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :bio, placeholder: "skills" %><br />
+        <%= f.text_area :bio, class: "w-full rounded-lg" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, 
+          autofocus: true, 
+          autocomplete: "email", 
+          class: "w-full rounded-lg" %>
+      </div>
+    </div>
+
+    <h2 class="text-xl font-[500] mt-6">Change the password</h2>
+
+    <div class="box-shadow px-2 py-4 rounded-lg mt-2">
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+
+      <div class="field">
+        <%= f.label :password %><br />
+        <%= f.password_field :password, 
+          autocomplete: "new-password", 
+          class: "w-full rounded-lg", 
+          placeholder: "password" %>
+        <% if @minimum_password_length %>
+          <br />
+          <em class="text-[12px]"><%= @minimum_password_length %> characters minimum</em>
+        <% end %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, 
+          autocomplete: "new-password", class: "w-full rounded-lg", 
+          placeholder: "password confirmation" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :current_password %><br />
+        <%= f.password_field :current_password, 
+          autocomplete: "current-password", class: "w-full rounded-lg", 
+          placeholder: "current password" %>
+      </div>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Update" %>
+    </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
+  <h3>Cancel my account</h3>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+  <div>Unhappy? <%= button_to "Cancel my account", 
+    registration_path(resource_name), data: { confirm: "Are you sure?", 
+    turbo_confirm: "Are you sure?" }, method: :delete %></div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
+  <%= link_to "Back", :back %>
 
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
+</div>
 
-<h3>Cancel my account</h3>
-
-<div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
-
-<%= link_to "Back", :back %>
+<script>
+  function previewImage(input) {
+    let preview = document.getElementById('image-preview')
+    if(input.files && input.files[0]){
+      let reader = new FileReader()
+      reader.onload = function(e) {
+        preview.src = e.target.result
+        preview.classList.remove("hidden")
+      }
+      reader.readAsDataURL(input.files[0])
+    } else {
+      preview.src = "#"
+      preview.classList.add("hidden")
+    }
+  }
+</script>
