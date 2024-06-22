@@ -1,6 +1,6 @@
 <div id="<%= dom_id post %>" class="w-full">
-  <div class="rounded-t-lg h-[300px]">
-    <%= image_tag post.cover_image_url_url, class: "w-full h-[300px] object-cover rounded-t-lg" %>
+  <div class="rounded-t-lg md:h-[300px] h-[200px]">
+    <%= image_tag post.cover_image_url_url, class: "w-full md:h-[300px] h-[200px] object-cover rounded-t-lg" %>
   </div>
   <div class="text-3xl text-black font-[500]">
     <%= post.title %>

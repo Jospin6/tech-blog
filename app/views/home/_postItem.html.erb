@@ -1,9 +1,9 @@
-<div class="w-full h-[150px] flex bg-gray-100 rounded-lg mb-2">
-    <div class="rounded-l-lg h-[150px] w-[150px]">
+<div class="w-full md:h-[150px] h-auto md:flex bg-gray-100 rounded-lg mb-2">
+    <div class="h-[150px] md:w-[150px] w-full">
         <%= image_tag post.cover_image_url_url, 
-            class: "w-full h-[150px] object-cover rounded-l-lg" %>
+            class: "w-full h-[150px] object-cover md:rounded-l-lg rounded-t-lg md:rounded-tr-none" %>
     </div>
-    <div class="ml-2 w-[75%] relative">
+    <div class="md:ml-2 md:w-[75%] w-full md:relative px-2 md:px-0">
 
         <%= link_to "#{post.title}", post_path(post.id), 
             class: "text-2xl text-black font-[500]"%>
@@ -18,7 +18,7 @@
             <%= link_to "#{excerpt(post.content).concat("...")}", post_path(post.id) %>
         </div>
         <div class="my-2 text-black flex justify-between w-full font-[300] 
-            flex justify-end absolute bottom-0 text-[14px]">
+             md:absolute md:bottom-0 text-[14px]">
             <span>username</span>
             <span><%= published_time(post.created_at) %></span>
         </div>
