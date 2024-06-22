@@ -9,7 +9,9 @@ class User < ApplicationRecord
             uniqueness: { case_sensitive: false }, 
             length: {maximum: 25}, 
             format: { with: /\A[a-zA-Z0-9 _\.]*\z/ }
-  
+
+  mount_uploader :image, ImageUploader
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :trackable, :confirmable
 
