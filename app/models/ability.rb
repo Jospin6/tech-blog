@@ -9,7 +9,7 @@ class Ability
     if user.is_admin?
       can :manage, :all
     else
-      can :read, :all
+      can :read, Post
     end
     
 
