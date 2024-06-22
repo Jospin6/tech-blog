@@ -83,3 +83,5 @@ group :test do
   gem "selenium-webdriver"
 
 end
+
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.8'
