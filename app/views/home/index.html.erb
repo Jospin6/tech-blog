@@ -12,13 +12,18 @@
             <%= image_tag @user.image_url, 
             class: "w-full h-[250px] object-cover rounded-t-lg" %>
         </div>
+        <div class="flex justify-between my-2">
+            <span class="text-xl"> <%= @user.username %> </span>
+            <span class="text-[14px]">My portfolio</span>
+        </div>
         <div class="text-[14px] mt-2">
             Full-stack Developer
         </div>
-        <div class="mt-2">
-            <span class="px-[10px] py-[5px] rounded-lg border-[1px] border-green-500 mr-2">Javascript</span>
-            <span class="px-[10px] py-[5px] rounded-lg border-[1px] border-green-500 mr-2">React</span>
-            <span class="px-[10px] py-[5px] rounded-lg border-[1px] border-green-500 mr-2">RoR</span>
+        <div class="flex flex-wrap text-[14px]">
+            
+            <% get_skills(@user.skills).each do |skill| %>
+                <span class="px-[10px] py-[5px] rounded-lg border-[1px] border-green-500 mr-2 mt-[5px]"> <%= skill %> </span>
+            <% end %>
         </div>
         <div class="mt-2 text-[14px]">
             Feel free to <a href="#" class="text-blue-600">connect with me</a>

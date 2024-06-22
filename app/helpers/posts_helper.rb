@@ -21,4 +21,10 @@ module PostsHelper
         end
     end
 
+    def get_skills(skills_string)
+        skills = skills_string.split(",")
+        skills
+    end
+    
+
 end
