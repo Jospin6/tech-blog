@@ -1,19 +1,23 @@
 <div class="md:w-[50%] w-full px-2 md:px-0 m-auto pb-2">
   <h2 class="text-xl font-[500]">Edit <%= resource_name.to_s.humanize %></h2>
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= form_for(resource, as: resource_name, 
+    url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="box-shadow px-2 py-4 rounded-lg mt-4">
       
       <% if can? :manage, :all %>
         <div class="flex field">
-          <img id="image-preview" src="#" alt="Image insight" class="hidden max-w-[100px] mr-2" />
+          <img id="image-preview" src="#" alt="Image insight" 
+            class="hidden max-w-[100px] mr-2" />
           <%= f.label :image, 
-            class: "px-[10px] py-[10px] cursor-pointer border-[1px] border-gray-400 font-[500] rounded-lg" %>
+            class: "px-[10px] py-[10px] cursor-pointer border-[1px] 
+              border-gray-400 font-[500] rounded-lg" %>
           <%= f.file_field :image, 
             onchange: "previewImage(this)", 
-            class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full hidden" %>
+            class: "block shadow rounded-md border border-gray-400 
+              outline-none px-3 py-2 mt-2 w-full hidden" %>
         </div>
       <% end %>
       

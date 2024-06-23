@@ -1,6 +1,7 @@
 <div id="<%= dom_id post %>" class="w-full">
   <div class="rounded-t-lg md:h-[300px] h-[200px]">
-    <%= image_tag post.cover_image_url_url, class: "w-full md:h-[300px] h-[200px] object-cover rounded-t-lg" %>
+    <%= image_tag post.cover_image_url_url, 
+      class: "w-full md:h-[300px] h-[200px] object-cover rounded-t-lg" %>
   </div>
   <div class="text-3xl text-black font-[500]">
     <%= post.title %>
@@ -10,7 +11,9 @@
     <span>
       <% display_tags(post.tags).each do |tag| %>
           <span class="mr-2 px-[10px] py-[5px] rounded-lg 
-            hover:border-[1px] hover:border-green-500 cursor-pointer"> <%= "##{tag}" %> </span>
+            hover:border-[1px] hover:border-green-500 cursor-pointer"> 
+            <%= "##{tag}" %> 
+          </span>
       <% end %>
     </span>
     <span><%= published_time(post.created_at) %></span>

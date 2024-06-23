@@ -1,8 +1,11 @@
 <%= form_with(model: post, class: "contents") do |form| %>
   <% if post.errors.any? %>
-    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
+    <div id="error_explanation" 
+      class="bg-red-50 text-red-500 px-3 py-2 
+      font-medium rounded-lg mt-3">
+      <h2>
+        <%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:
+      </h2>
       <ul>
         <% post.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -13,21 +16,29 @@
 
   <div class="mt-4 rounded-t-lg shadow h-auto py-6 px-4">
     <div class="flex">
-      <img id="image-preview" src="#" alt="Image insight" class="hidden max-w-[100px] mr-2" />
-      <%= form.label :cover_image_url, class: "px-[10px] py-[10px] ml-4 cursor-pointer border-[1px] border-gray-400 font-[500] rounded-lg" %>
-      <%= form.file_field :cover_image_url, onchange: "previewImage(this)", class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full hidden" %>
+      <img id="image-preview" src="#" alt="Image insight" 
+        class="hidden max-w-[100px] mr-2" />
+      <%= form.label :cover_image_url, 
+        class: "px-[10px] py-[10px] ml-4 cursor-pointer border-[1px] 
+        border-gray-400 font-[500] rounded-lg" %>
+      <%= form.file_field :cover_image_url, 
+        onchange: "previewImage(this)", 
+        class: "block shadow rounded-md border border-gray-400 
+        outline-none px-3 py-2 mt-2 w-full hidden" %>
     </div>
 
     <div class="mt-2">
       <%= form.text_field :title, 
         placeholder: "New post title here...", 
-        class: "block focus:outline-none focus:ring-0 border-none outline-none text-3xl font-bold py-2 mt-2 w-fulls" %>
+        class: "block focus:outline-none focus:ring-0 border-none 
+        outline-none text-3xl font-bold py-2 mt-2 w-fulls" %>
     </div>
 
     <div class="mt-2">
       <%= form.text_field :tags, 
         placeholder: "Add up to 4 tags",
-        class: "block border-none focus:outline-none focus:ring-0 outline-none py-2 mt-2 w-full" %>
+        class: "block border-none focus:outline-none 
+        focus:ring-0 outline-none py-2 mt-2 w-full" %>
     </div>
   </div>
   <div class="my-2 rounded-b-lg  h-auto py-2">
@@ -37,7 +48,8 @@
   </div>
 
   <div class="inline">
-    <%= form.submit class: "rounded-lg py-[5px] px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+    <%= form.submit class: "rounded-lg py-[5px] px-5 bg-blue-600 text-white 
+      inline-block font-medium cursor-pointer" %>
   </div>
 <% end %>
 

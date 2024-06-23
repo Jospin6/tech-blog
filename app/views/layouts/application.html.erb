@@ -17,12 +17,17 @@
       <div class="lg:w-[80%] lg:m-auto md:w-full md:px-2">
         
         <% if notice.present? %>
-          <p class="notice w-full text-center py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" > <%= notice %> </p>
+          <p class="notice w-full text-center py-2 px-3 bg-green-50 mb-5 
+            text-green-500 font-medium rounded-lg inline-block" > 
+            <%= notice %> 
+          </p>
         <% end %>
         <% if alert.present? %>
-          <p class="alert w-full text-center py-2 px-3 bg-red-50 mb-5 text-red-500 font-medium rounded-lg inline-block"> <%= alert %> </p>
+          <p class="alert w-full text-center py-2 px-3 bg-red-50 mb-5 
+            text-red-500 font-medium rounded-lg inline-block"> 
+            <%= alert %> 
+          </p>
         <% end %>
-
         <%= yield %>
       </div>
     </main>
