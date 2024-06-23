@@ -10,11 +10,9 @@
     <div class="text-[14px] mt-2">
         Full-stack Developer
     </div>
-    <div class="flex flex-wrap text-[14px]">
-            <% get_skills(@user.skills).each do |skill| %>
-                <span class="px-[10px] py-[5px] rounded-lg border-[1px] border-green-500 mr-2 mt-[5px]"> <%= skill %> </span>
-            <% end %>
-        </div>
+    <div class="flex flex-wrap text-[14px] font-[500]">  
+            <%= @user.skills %>
+    </div>
     <div class="mt-2 text-[14px] text-gray-800">
         <%= @user.bio %> Feel free to <a href="#" class="text-blue-600">connect with me</a>
     </div>

@@ -20,11 +20,6 @@ module PostsHelper
             timestamp.strftime("%d %b %Y")
         end
     end
-
-    def get_skills(skills_string)
-        skills = skills_string.split(",")
-        skills
-    end
     
     def excerpt(rich_text)
         text = rich_text.to_s
