@@ -12,26 +12,20 @@
             <%= image_tag @user.image_url, 
             class: "w-full h-[250px] object-cover rounded-t-lg" %>
         </div>
-        <div class="flex justify-between my-2">
-            <span class="text-xl"> <%= @user.username %> </span>
+        <div class="flex justify-between mt-2">
+            <span class="text-[18px]"> <%= @user.username %> </span>
             <span class="text-[14px]">My portfolio</span>
         </div>
-        <div class="text-[14px] mt-2">
+        <div class="text-[14px]">
             Full-stack Developer
         </div>
-        <div class="flex flex-wrap text-[14px]">
-            
-            <% get_skills(@user.skills).each do |skill| %>
-                <span class="px-[10px] py-[5px] rounded-lg border-[1px]
-                    border-green-500 mr-2 mt-[5px]"> 
-                    <%= skill %> 
-                </span>
-            <% end %>
+        <div class="flex flex-wrap text-[14px] font-[500]">  
+            <%= @user.skills %>
         </div>
-        <div class="mt-2 text-[14px]">
+        <div class="text-[14px]">
             Feel free to <a href="#" class="text-blue-600">connect with me</a>
         </div>
-        <div class="flex justify-center mt-4">
+        <div class="flex justify-center mt-2">
             <a href="#" class="mr-2 text-2xl text-gray-400 hover:text-black"><%= fa_icon "github" %></a>
             <a href="#" class="mr-2 text-2xl text-gray-400 hover:text-black"><%= fa_icon "linkedin" %></a>
             <a href="#" class="mr-2 text-2xl text-gray-400 hover:text-black"><%= fa_icon "twitter" %></a>
