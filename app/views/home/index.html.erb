@@ -13,26 +13,16 @@
             class: "w-full h-[250px] object-cover rounded-t-lg" %>
         </div>
         <div class="flex justify-between mt-2">
-            <span class="text-[18px]"> <%= @user.username %> </span>
-            <span class="text-[14px]">My portfolio</span>
+            <span class="text-[16px]"> <%= @user.username %> </span>
         </div>
-        <div class="text-[14px]">
-            Full-stack Developer
-        </div>
-        <div class="flex flex-wrap text-[14px] font-[500]">  
-            <%= @user.skills %>
-        </div>
-        <div class="text-[14px]">
-            Feel free to <a href="#" class="text-blue-600">connect with me</a>
+        <div class="text-[12px]">
+            Full-stack Developer <%= @user.skills %> Feel free to <a href="#" class="text-blue-600">connect with me</a>
         </div>
         <div class="flex justify-center mt-2">
             <a href="#" class="mr-2 text-2xl text-gray-400 hover:text-black"><%= fa_icon "github" %></a>
             <a href="#" class="mr-2 text-2xl text-gray-400 hover:text-black"><%= fa_icon "linkedin" %></a>
             <a href="#" class="mr-2 text-2xl text-gray-400 hover:text-black"><%= fa_icon "twitter" %></a>
             <a href="#" class="mr-2 text-2xl text-gray-400 hover:text-black"><%= fa_icon "medium" %></a>
-        </div>
-        <div class="text-[14px] text-gray-700 text-center py-2">
-            Made with <span class="text-red-600"><%= fa_icon "heart" %></span> by Jospin Ndagano &copy; 2024
         </div>
     </div>
 </div>
