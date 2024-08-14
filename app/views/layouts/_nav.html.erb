@@ -25,7 +25,7 @@
     </div>
     <%= link_to "Home", root_path, class: "block text-center mt-4 hover:text-blue-600" %> 
     <%= link_to "Profil", edit_user_registration_path, class: "block text-center mt-4 hover:text-blue-600" %>
-    <%= link_to "Portfolio", root_path, class: "block text-center mt-4 hover:text-blue-600" %>
+    <a href="https://jospinndagano.netlify.app/" class="block text-center mt-4 hover:text-blue-600">Portfolio</a>
     <% if !user_signed_in? %>
         <%= link_to "Sign up", new_user_session_path, class: "block text-center mt-4 hover:text-blue-600" %> 
     <% else %>
