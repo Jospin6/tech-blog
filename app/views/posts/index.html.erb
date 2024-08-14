@@ -10,17 +10,15 @@
   <% content_for :title, "Posts" %>
 
   <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Posts</h1>
-    <%= link_to "New post", new_post_path, 
-      class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+    <h1 class="font-bold text-xl">Posts</h1>
   </div>
 
   <div id="posts" class="min-w-full">
     <% @posts.each do |post| %>
       <%= render post %>
-      <p>
+      <p class="mb-2">
         <%= link_to "Show this post", post, 
-          class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+          class: "text-blue-600 text-[16px] inline-block font-medium" %>
       </p>
     <% end %>
   </div>
