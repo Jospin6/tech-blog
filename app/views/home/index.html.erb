@@ -8,15 +8,21 @@
         <% end %>
     </div>
     <div class="md:col-span-2 mt-[10px] md:mt-[0px] h-auto">
-        <div class="h-[250px]">
-            <%= image_tag @user.image_url, 
-            class: "w-full h-[250px] object-cover rounded-t-lg" %>
-        </div>
-        <div class="flex justify-between mt-2">
-            <span class="text-[16px]"> <%= @user.username %> </span>
-        </div>
+        
+        <% if @user %>
+            <div class="h-[250px]">
+                <%= image_tag @user.image_url, 
+                class: "w-full h-[250px] object-cover rounded-t-lg" %>
+            </div>
+            <div class="flex justify-between mt-2">
+                <span class="text-[16px]"> <%= @user.username %> </span>
+            </div>
+        <% end %>
         <div class="text-[12px]">
-            I'm a Full-Stack Developer skilled in <%= @user.skills %>. 
+            I'm a Full-Stack Developer skilled in 
+            <% if @user %>
+                <%= @user.skills %>. 
+            <% end %>
             With a eager desire for problem-solving, I love creating useful products and trying new technologies. 
             In my free time, I enjoy working on open-source projects and sharing what I learn. 
             Feel free to <a href="#" class="text-blue-600">connect with me</a>
