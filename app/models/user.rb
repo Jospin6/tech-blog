@@ -3,7 +3,7 @@ class User < ApplicationRecord
   attr_accessor :login
 
   # Include default devise modules. Others available are:
-  # :lockable, :timeoutable, and :omniauthable
+  # :lockable, :timeoutable, :omniauthable
   validates :username, 
             presence: true, 
             uniqueness: { case_sensitive: false },
