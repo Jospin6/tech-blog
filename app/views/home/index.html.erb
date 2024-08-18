@@ -9,7 +9,7 @@
     </div>
     <div class="md:col-span-2 mt-[10px] md:mt-[0px] h-auto">
         
-        <% if @user %>
+        <% if @user && @user.image_url.present? %>
             <div class="h-[250px]">
                 <%= image_tag @user.image_url, 
                 class: "w-full h-[250px] object-cover rounded-t-lg" %>
