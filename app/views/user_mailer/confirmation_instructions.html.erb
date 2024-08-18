@@ -1,0 +1,7 @@
+<h1>Wellecome, <%= @user.email %>!</h1>
+<p>
+  Thank you for signing up to our blog, please confirm your account by clicking to the link bellow :
+</p>
+<p>
+  <%= link_to 'Confirm my account', confirmation_url(@user, confirmation_token: @token) %>
+</p>
