@@ -3,7 +3,7 @@ class User < ApplicationRecord
   attr_accessor :login
 
   # Include default devise modules. Others available are:
-  # :lockable, :timeoutable, :omniauthable
+  # :lockable, :timeoutable, :omniauthable, :confirmable
   validates :username, 
             presence: true, 
             uniqueness: { case_sensitive: false },
@@ -12,7 +12,7 @@ class User < ApplicationRecord
   mount_uploader :image, ImageUploader
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :trackable, :confirmable
+         :recoverable, :rememberable, :validatable, :trackable
 
 
   def self.find_first_by_auth_conditions(warden_conditions)
