@@ -7,7 +7,7 @@ class Ability
     # Define abilities for the user here. For example:
     user ||= User.new
     
-    if user.is_admin?
+    if user.id == User.first.id
       can :manage, :all
     end
     
