@@ -8,7 +8,6 @@
         <% end %>
     </div>
     <div class="md:col-span-2 mt-[10px] md:mt-[0px] h-auto">
-        
         <% if @user && @user.image_url.present? %>
             <div class="h-[250px]">
                 <%= image_tag @user.image_url, 
@@ -28,10 +27,10 @@
             Feel free to <a href="#" class="text-blue-600">connect with me</a>
         </div>
         <div class="flex justify-center mt-2">
-            <a href="#" class="mr-2 text-2xl text-gray-400 hover:text-black"><%= fa_icon "github" %></a>
-            <a href="#" class="mr-2 text-2xl text-gray-400 hover:text-black"><%= fa_icon "linkedin" %></a>
-            <a href="#" class="mr-2 text-2xl text-gray-400 hover:text-black"><%= fa_icon "twitter" %></a>
-            <a href="#" class="mr-2 text-2xl text-gray-400 hover:text-black"><%= fa_icon "medium" %></a>
+            <a href="https://github.com/Jospin6" class="mr-2 text-2xl text-gray-400 hover:text-black"><%= fa_icon "github" %></a>
+            <a href="https://www.linkedin.com/in/jospin-ndagano-8474b7267/" class="mr-2 text-2xl text-gray-400 hover:text-black"><%= fa_icon "linkedin" %></a>
+            <a href="https://x.com/jospinndagano" class="mr-2 text-2xl text-gray-400 hover:text-black"><%= fa_icon "twitter" %></a>
+            <a href="https://medium.com/@jospinndagano1" class="mr-2 text-2xl text-gray-400 hover:text-black"><%= fa_icon "medium" %></a>
         </div>
     </div>
 </div>
