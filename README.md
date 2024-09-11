@@ -5,7 +5,7 @@
 
 > The home page is a list of all my posts and a section that introduce myself.
 
-![screenshot](./homeJNDEV.png)
+![screenshot](./home.png)
 
 <hr />
 
